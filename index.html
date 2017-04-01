@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Travel Share Blog - Single Page Application</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+
+	<!--Applications specific files -->
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+</head>
+
+<body>
+	
+
+		
+			<!--NavBar Header when NOT LOGGED IN -->
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<div class="navbar-header navbar-logo">
+						<a class="navbar-brand" href="#"><img src="images/navbar-logo.jpg" class="img-responsive" height="40" width="40" /></a>
+					</div>
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Travel Share Blog</a>
+					</div>
+					<form class="navbar-form navbar-left">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="search">
+							<div class="input-group-btn">
+								<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+							</div>	
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li class=""><a href="#"><i class="fa fa-pencil"></i> Write a Story</a></li>
+						<li class=""><a href="#" data-toggle="modal" data-target="#sign-in-modal"><i class="fa fa-sign-in"></i> Sign in/Sign up</a></li>
+					</ul>
+				</div>
+			</nav>
+			
+			<!--NavBar Header when LOGGED IN-->
+
+			<!--<nav class="navbar navbar-default">
+				<div class="container">
+					<div class="navbar-header navbar-logo">
+						<a class="navbar-brand" href="#"><img src="images/navbar-logo.jpg" class="img-responsive" height="40" width="40" /></a>
+					</div>
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Travel Share Blog</a> 
+					</div>
+					<form class="navbar-form navbar-left">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="search">
+							<div class="input-group-btn">
+								<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+							</div> 
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li class=""><a href="#"><i class="fa fa-pencil"></i> Write a Story</a></li>
+						<li class=""><a href="#"><i class="fa fa-bell"></i> Notification</a></li>
+						<li class=""><a href="#"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+						
+					</ul>
+					
+				</div>
+			</nav>
+			-->
+
+			<!-- Sign up Modal -->
+			<div class="modal" id="sign-in-modal" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<p>Enter your Email and Password to sign in and share your stories :)</p>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label for="email" class="col-sm-2 col-sm-offset-1">Email : </label>
+									<div class="col-sm-5">
+										<input type="email" class="form-control" id="email">
+									</div>
+									<div class="col-sm-4">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="password" class="col-sm-2 col-sm-offset-1">Password:</label>
+									<div class="col-sm-5">
+										<input type="password" class="form-control" id="password">
+									</div>
+									<div class="col-sm-4">
+									</div>
+								</div>
+								<div class="col-sm-offset-3 col-sm-9">
+									<button type="submit" class="btn btn-default">Submit</button> 
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--MENU Tabs Option -->
+			<div class="container">
+				<div class="row">
+					<ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+						<li><a data-toggle="tab" href="#menu1">Profile</a></li>
+						<li><a data-toggle="tab" href="#menu2">Favorites</a></li>
+						<li><a data-toggle="tab" href="#menu3">Trendy Articles</a></li>
+					</ul> 
+				</div>
+			</div>	
+		
+
+		
+			<div class="container">
+				<!-- Each artickle will shown in row here -->
+				<div class="row">
+					<div class="col-sm-3">
+					</div>
+
+					<!--Artickle Content -->
+					<div class="col-sm-6">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-sm-2">
+										<img src="images/girl2.jpg" class="img-circle" height="70" width="70" />	
+									</div>
+									<div class="col-sm-10">
+										<div class="row">
+											<div class="col-sm-4">
+												<p><b>Sonali Garg</b></p>
+											</div>
+											<div class="col-sm-4">
+												<i>Posted on Feb 24</i>
+											</div>
+											<div class="col-sm-1">
+											</div>
+											<div class="col-sm-3">
+												<button type="button" class="btn btn-default btn-xs btn-follow">Follow Me</button>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<p><i>I am planning to do masters from USA. Novelist, coder #Adobe</i></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-body">
+							</div>
+							<div class="panel-footer">
+							</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-sm-3">
+										<i class="fa fa-heart-o"></i> Likes
+									</div>
+									<div class="col-sm-3">
+										<i class="fa fa-star-o"></i> Favorites
+									</div>
+									<div class="col-sm-3">
+									</div>
+									<div class="col-sm-3">
+										<i class="fa fa-comment-o"></i> Comment
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Article Content End -->
+					
+					<div class="col-sm-3">
+					</div>
+				</div>
+			</div>	
+		
+			
+
+
+
+</body>
+</html>

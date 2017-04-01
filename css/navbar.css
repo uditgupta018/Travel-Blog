@@ -1,0 +1,18 @@
+.navbar-default{
+	background-color : #FFFFFF;
+	
+}
+
+.navbar-logo{
+	margin-top: -5px;
+}
+
+.btn-follow{
+	border-radius: 24px;
+	padding:0 15px 0 15px; 
+}
+
+.btn-follow:hover{
+	background-color: white;
+	color: #4682B4;
+}

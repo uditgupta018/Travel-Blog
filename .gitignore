@@ -2,6 +2,9 @@
 *.apk
 *.ap_
 
+#Library file min.css, min.js,min.bootstrap
+bower_components/
+
 # Files for the ART/Dalvik VM
 *.dex
 
