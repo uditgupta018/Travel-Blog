@@ -3,7 +3,8 @@
  * to write logic to display of angular error messages.
  * if validated succesfully, use user information and create database of record of user
  *
- *
+ * @desc : scope is heap area 
+ *        $scope is a method to access variables define in scope.
  *
  */
 (function(){
@@ -23,11 +24,27 @@
 		$scope.isPasswordMatched = true;
  		
  		$scope.user = {};
- 			
- 		/* this is binding member of controller. When user submits signupForm, it passes control
- 		 *  to this function
+ 		
+ 		/* @desc : to define list of functions exposed in the view and can be accessed 
+ 		 *       in html form model
  		 */
- 		$scope.submitForm = function (form){
+ 		$scope.submitForm = submitForm;
+ 		
+
+ 		///////
+ 		/* Implementation Details Starts Below */
+ 		
+ 		/* this is binding member of controller. When user submits signupForm, it passes control
+ 		 * to this function. Two way data binding of model & view
+		 * let's deep dive into function definition and expression.
+		 * @function : submitForm is used as function deifinition not funtion expression
+		 * submitForm = function(form) is function expression. If we use this method , we would
+		 * have ran into trouble (JavaScript Hoisting trouble)
+		 * @tutorial : read more about it at :
+		 *  bindable Members at top - https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#comments
+		 *  Javascriupt hoisting issues - https://johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/
+ 		 */
+ 		function submitForm(form){
 			$scope.submitted = true;
 			console.log(form.name);
 

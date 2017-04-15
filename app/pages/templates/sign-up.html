@@ -42,7 +42,15 @@
 						<!-- Sign up Page -->
 						<div id="sign-up-content" class="tab-pane fade">
 							<form class="form-horizontal" name="signUpForm" novalidate>
-																	       
+								
+								<!--@param type : is html field type of input
+								   *@param class: is bootstrap class to implement bootstrap CSs
+								   *@param name : it is used for server side identification mainly id is  *            implement CSS detailsn, name also used on client side to identify
+								                form variables.
+								   *@param placeholder: conent is visible inisde input box to user              
+								   *@param ng-model: angular js two data-binidng
+								   *@param required: this is required, angular js $error will identify thsi error
+								-->								       
 								<div class="form-group" ng-class="{ 'has-error' : !isUsernameValid }">
 									<label for="name" class="col-sm-12"><i class="fa"></i> Name :</label><br/>
 									<div class="col-sm-12"> 
