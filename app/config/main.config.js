@@ -2,7 +2,7 @@
 	
 	
 	angular
-		.module("app",["ngRoute"])
+		.module("app",["ngRoute","controller_module"])
 		.config(config);
 
 	function config($routeProvider){
