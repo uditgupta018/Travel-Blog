@@ -15,6 +15,7 @@
 	<!--Applications specific files -->
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="css/sign-up.css">
+	<script type="text/javascript" src="app/service/userLogin.srv.js"></script>
 	<script type="text/javascript" src="app/controller/validate.controller.js"></script>
 	<script type="text/javascript" src="app/config/main.config.js"></script>
 
@@ -83,18 +84,42 @@
 			<div class="container">
 				<div class="row">
 					<ul class="nav nav-tabs">
-						<li class="active"><a href="#!/" data-toggle="tab">Home</a></li>
-						<li><a href="#!/profile" data-toggle="tab">Profile</a></li>
-						<li><a href="#!/favorites" data-toggle="tab">Favorites</a></li>
-						<li><a href="#!/trendyArtickles" data-toggle="tab">Trendy Articles</a></li>
+						<li class="active"><a href="#main" data-target="#home" data-toggle="tab">Home</a></li>
+						<li><a href="#profile" data-target="#profile" data-toggle="tab">Profile</a></li>
+						<li><a href="#favorites" data-target="#favorites" data-toggle="tab">Favorites</a></li>
+						<li><a href="#trendyArtickles" data-target="#trendyArtickles" data-toggle="tab">Trendy Articles</a></li>
 					</ul> 
-				</div>
+					<div class="tab-content">
+						<div class="tab-pane active" id="#home" class="tab-pane">home</div>
+						<div class="tab-pane" id="#profile" class="tab-pane">profile</div>
+						<div class="tab-pane" id="#favortites" class="tab-pane">favorites</div>
+						<div class="tab-pane" id="#trendyArtickles" class="tab-pane">trendy</div>
+
+					</div>
+						
 			</div>	
+			<div class="tab-content">
+				<div class="tab-pane active" id="#home" class="tab-pane">home</div>
+				<div class="tab-pane" id="#profile" class="tab-pane">profile</div>
+				<div class="tab-pane" id="#favortites" class="tab-pane">favorites</div>
+				<div class="tab-pane" id="#trendyArtickles" class="tab-pane">trendy</div>
+
+			</div>
 			
-			
-			<div ng-view>
+
+			<!--<div ng-view>
 				
 			</div>
+-->
+			 <script>
+				$(function () {
+   					$('.nav-tabs a').tab('show');
+    				$('.nav-tabs a').click(function (e) {
+			        	e.preventDefault();
+			        	$(this).tab('show');
+    				});
+				})();
+			</script>
 
 
 

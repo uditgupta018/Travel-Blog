@@ -7,11 +7,11 @@
 
 	function config($routeProvider){
 
-	    $routeProvider
+	   /* $routeProvider
 	    	.when('/',{
 	   			template : 'Home page '
-	    	})
-	    	.when('/profile',{
+	    	});*/
+	    	/*.when('/profile',{
    				templateUrl : 'app/pages/home.html'
    			})
    			.when('/favorites',{
@@ -19,7 +19,7 @@
 			})
 			.when('/trendyArtickles',{
 				'template'  : '<h1>My Hotel Booking Application </h1>'
-			});
+			});*/
 
 	};
 
