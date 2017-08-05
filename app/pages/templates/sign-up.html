@@ -52,17 +52,21 @@
 								   *@param required: this is required, angular js $error will identify thsi error
 								-->								       
 								<div class="form-group" ng-class="{ 'has-error' : !isUsernameValid }">
-									<label for="name" class="col-sm-12"><i class="fa"></i> Name :</label><br/>
+									<label for="name" class="col-sm-12"><i class="fa"></i> username :</label><br/>
 									<div class="col-sm-12"> 
 										<input type="text" 
 										       class="form-control" 
 										       name="name" 
 										       placeholder="Enter your Name"
 										       ng-model="user.name"
+										       username-exists
 										       required />
 										<span ng-show="!isUsernameValid">
 											<p class="error-warning">Username is required</p>
-										<span>						
+										<span>
+										<span ng-if="signUpForm.name.$error.usernameFind">
+											<p class="error-warning">username already exists</p>
+										</span>							
 									</div>
 								</div>
 

@@ -10,3 +10,5 @@ git commands to push the code to Github
 2) git commit -m ""
 3) git push
 
+really nice article about coding implementatio  details of Angular JS - 
+https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#comments
