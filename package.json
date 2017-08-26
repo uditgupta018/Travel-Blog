@@ -1,0 +1,13 @@
+{
+	"name": "travel-blog-web-app",
+	"description": "angular js app",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"ejs": "^2.5.7",
+		"express": "^4.15.4",
+		"mongodb": "^2.2.31"
+	}
+}
